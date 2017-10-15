@@ -1,0 +1,249 @@
+{
+  "contract_name": "Store",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "_balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        },
+        {
+          "name": "_name",
+          "type": "bytes32"
+        },
+        {
+          "name": "_balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerCustomer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "new_store_name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "renameStoreTo",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "deregisterCustomer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getStoreBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "store_name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "new_owner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CustomerRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CustomerRegistrationFailed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CustomerDeregistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "customer",
+          "type": "address"
+        }
+      ],
+      "name": "CustomerDeregistrationFailed",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b5b60008054600160a060020a03191633600160a060020a03161790555b60008054600160a060020a03191633600160a060020a039081169190911782557f6d792d72657461696c2d73746f726500000000000000000000000000000000006001556002829055301631111561008457600080fd5b5b5b610661806100956000396000f3006060604052361561008b5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166312065fe0811461008f57806321527090146100b45780638da5cb5b146100ed578063918145771461011c578063dd198e0414610146578063f05fae6814610179578063f2663f181461019e578063f2fde38b146101c3575b5b5b005b341561009a57600080fd5b6100a26101e4565b60405190815260200160405180910390f35b34156100bf57600080fd5b6100d9600160a060020a0360043516602435604435610204565b604051901515815260200160405180910390f35b34156100f857600080fd5b6101006103d1565b604051600160a060020a03909116815260200160405180910390f35b341561012757600080fd5b6100d96004356103e0565b604051901515815260200160405180910390f35b341561015157600080fd5b6100d9600160a060020a0360043516610419565b604051901515815260200160405180910390f35b341561018457600080fd5b6100a2610552565b60405190815260200160405180910390f35b34156101a957600080fd5b6100a2610577565b60405190815260200160405180910390f35b34156101ce57600080fd5b61008b600160a060020a036004351661057d565b005b600160a060020a0333166000908152600360205260409020600701545b90565b6000806000806000806102156105f1565b60005433600160a060020a0390811691161461023057600080fd5b7f73000000000000000000000000000000000000000000000000000000000000009550859450849350839250829150600160a060020a038a1615610381576101006040519081016040908152600160a060020a038c1680835260208084018d90528284018a9052606084018690526080840187905260a0840189905260c0840188905260e084018c90526000918252600390522090915081908151815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03919091161781556020820151600182015560408201516002820155606082015160038201556080820151600482015560a0820151600582015560c0820151600682015560e0820151600790910155507f155e8619f4d23b96769599cb9af87da3e06a360082869c18578011da9a06e6708a604051600160a060020a03909116815260200160405180910390a1600196506103c3565b7f7c66b00fc05577d946381dc5b311ac0e6f93dbdc6f1b7b6a570ccdd7dbed6a038a604051600160a060020a03909116815260200160405180910390a1600096505b5b5050505050509392505050565b600054600160a060020a031681565b6000805433600160a060020a039081169116146103fc57600080fd5b60015b1561040f57506001818155610413565b5060005b5b919050565b60008054819033600160a060020a0390811691161461043757600080fd5b50600160a060020a03808316600090815260036020526040902080549091161561050957600160a060020a0383166000908152600360208190526040808320805473ffffffffffffffffffffffffffffffffffffffff1916815560018101849055600281018490559182018390556004820183905560058201839055600682018390556007909101919091557f98106f8805b0ce455829ffa96d3025c1dbf9b72f0c7425f51365abc9b3d8d63190849051600160a060020a03909116815260200160405180910390a16001915061054b565b7f82f89e1291aa3a9806447cdbb4216419b107869075e74a5c0036a897a94c946b83604051600160a060020a03909116815260200160405180910390a1600091505b5b50919050565b6000805433600160a060020a0390811691161461056e57600080fd5b506002545b5b90565b60015481565b60005433600160a060020a0390811691161461059857600080fd5b600160a060020a038116158015906105be5750600054600160a060020a03828116911614155b156105ec576000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b5b5b50565b6101006040519081016040908152600080835260208301819052908201819052606082018190526080820181905260a0820181905260c0820181905260e0820152905600a165627a7a72305820e5ec33564d0e8e4814373a35934d1088de5ea4763661e12cccedc34ae9443f1a0029",
+  "networks": {
+    "1507221210005": {
+      "events": {
+        "0x155e8619f4d23b96769599cb9af87da3e06a360082869c18578011da9a06e670": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "customer",
+              "type": "address"
+            }
+          ],
+          "name": "CustomerRegistered",
+          "type": "event"
+        },
+        "0x7c66b00fc05577d946381dc5b311ac0e6f93dbdc6f1b7b6a570ccdd7dbed6a03": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "customer",
+              "type": "address"
+            }
+          ],
+          "name": "CustomerRegistrationFailed",
+          "type": "event"
+        },
+        "0x98106f8805b0ce455829ffa96d3025c1dbf9b72f0c7425f51365abc9b3d8d631": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "customer",
+              "type": "address"
+            }
+          ],
+          "name": "CustomerDeregistered",
+          "type": "event"
+        },
+        "0x82f89e1291aa3a9806447cdbb4216419b107869075e74a5c0036a897a94c946b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "customer",
+              "type": "address"
+            }
+          ],
+          "name": "CustomerDeregistrationFailed",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf9b0aac2d78b5fb5f0f11415b51e02967b6768e9",
+      "updated_at": 1507253479384
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1507253479384
+}

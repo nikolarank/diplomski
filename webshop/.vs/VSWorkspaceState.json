@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build\\contracts",
+    "\\contracts",
+    "\\migrations",
+    "\\node_modules\\express",
+    "\\src",
+    "\\src\\css",
+    "\\src\\js"
+  ],
+  "SelectedNode": "\\contracts\\Purchase.sol",
+  "PreviewInSolutionExplorer": false
+}
